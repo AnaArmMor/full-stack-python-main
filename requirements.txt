@@ -1,0 +1,4 @@
+reflex==0.5.3
+reflex-local-auth # pip install reflex_local_auth
+#reflex db init
+Authlib #instalar biblioteca de authentication

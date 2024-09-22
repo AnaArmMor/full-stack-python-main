@@ -1,0 +1,54 @@
+dashboard.py
+
+def sidebar():
+    return rx.box(
+        # ... contenido del sidebar
+        bg=Colors.primary,
+        color="white",
+        width="250px",
+        height="100vh",
+        padding="1em",
+        box_shadow="2px 0 5px rgba(0, 0, 0, 0.1)"
+    )
+
+rx.box(
+    child,
+    rx.logo(),
+    bg=Colors.background,
+    padding="2em",
+    border_radius="10px",
+    box_shadow="0 4px 6px rgba(0, 0, 0, 0.05)",
+    width="100%",
+    min_height="100vh",
+    id="my-content-area-el"
+)
+rx.hstack(
+    sidebar(),
+    rx.box(
+        child,
+        rx.logo(),
+        bg=Colors.background,
+        padding="2em",
+        width="100%",
+        min_height="100vh",
+        id="my-content-area-el"
+    ),
+    spacing="0",
+    align_items="flex-start",
+    width="100%"
+)
+rx.responsive(
+    rx.hstack(
+        # ... contenido del hstack
+    ),
+    sm=rx.vstack(
+        sidebar(),
+        rx.box(
+            child,
+            rx.logo(),
+            width="100%",
+            padding="1em",
+        )
+    )
+)
+
